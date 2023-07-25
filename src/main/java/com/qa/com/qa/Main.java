@@ -1,4 +1,5 @@
 package com.qa.com.qa;
+import com.qa.model.*;
 
 public class Main {
     public static void main(String[] args)
@@ -24,5 +25,11 @@ public class Main {
         c.move(10.5, 4.3);
         System.out.println(c + ", CentrePoint is: " +
                 c.getCentrePoint() + ", Area is: " + c.getArea());
+
+        Cat cat1 = new Cat("Whiskers", 10);
+        Cat cat2 = new Cat("Midas", 8);
+        Dog dog = new Dog("Spot", 2);
+        Rabbit rabbit1 = new Rabbit("Peter", 2);
+        Rabbit rabbit2 = new Rabbit("Cottontail", 3);
     }
 }
