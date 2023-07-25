@@ -1,5 +1,6 @@
 package com.qa.com.qa;
 import com.qa.model.*;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args)
@@ -31,5 +32,15 @@ public class Main {
         Dog dog = new Dog("Spot", 2);
         Rabbit rabbit1 = new Rabbit("Peter", 2);
         Rabbit rabbit2 = new Rabbit("Cottontail", 3);
+        ArrayList<Animal> animals = new ArrayList<Animal>();
+        animals.add(cat1);
+        animals.add(cat2);
+        animals.add(dog);
+        animals.add(rabbit1);
+        animals.add(rabbit2);
+        for (Animal animal: animals)
+        {
+            System.out.println(animal);
+        }
     }
 }
