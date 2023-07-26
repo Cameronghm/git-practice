@@ -42,5 +42,18 @@ public class Main {
         {
             System.out.println(animal);
         }
+        HashMap<String, Animal> animalMap = new HashMap<String, Animal>();
+        animalMap.put(cat1.getName(), cat1);
+        animalMap.put(cat2.getName(), cat2);
+        animalMap.put(dog.getName(), dog);
+        animalMap.put(rabbit1.getName(), rabbit1);
+        animalMap.put(rabbit2.getName(), rabbit2);
+        for (String key:animalMap.keySet())
+        {
+            System.out.println("Key: " + key + " Value: " + animalMap.get(key));
+        }
+        HashSet<Animal> set = new HashSet<>();
+        set.addAll(animals);
+        set.add(cat1);
     }
 }
