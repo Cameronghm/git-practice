@@ -54,6 +54,26 @@ public class Main {
         }
         HashSet<Animal> set = new HashSet<>();
         set.addAll(animals);
-        set.add(cat1);
+        System.out.println(set);
+        Iterator<Animal> iter = set.iterator();
+        while(iter.hasNext()) {
+            System.out.println(iter.next());
+        }
+        System.out.println("\nFinding Spot.");
+        for (Animal a : animals) {
+           if (a.getName().equals("Spot")) {
+               System.out.println(
+                       "Found Spot in the ArrayList: " + a);
+           }
+        }
+        System.out.println("Found Spot in the HashMap: " +
+                             animalMap.get("Spot"));
+        Collections.sort(animals);
+        System.out.println("Sorted");
+        for (Animal animal: animals) {System.out.println(animal);}
+        TreeMap<String, Animal> treemap = new TreeMap<>(animalMap);
+        System.out.println("TreeMap");
+        for(String key: treemap.keySet()) {System.out.println(key + " " + treemap.get(key));}
+
     }
 }
